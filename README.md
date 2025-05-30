@@ -8,9 +8,12 @@ BHTools integrates a suite of custom nodes that simplify the process of crafting
 
 ## Custom Node: CinematicSceneDirectorBHTools
 
-<div align="right">
-  <img src="./images/CinematicSceneDirectorBHTools.jpg" alt="CinematicSceneDirectorBHTools Screenshot">
-</div>**CinematicSceneDirectorBHTools** is a highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
+<div style="float: right; width: 50%; margin-left: 1em;">
+  <a href="./images/CinematicSceneDirectorBHTools.jpg" target="_blank">
+    <img src="./images/CinematicSceneDirectorBHTools.jpg" alt="CinematicSceneDirectorBHTools Screenshot" style="width:100%;">
+  </a>
+</div>  
+**CinematicSceneDirectorBHTools** is a highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
 
 ### How It Works
 
