@@ -23,7 +23,7 @@ To install this node and use it with ComfyUI, follow these instructions:
 1. **Clone the Repository:**
    Terminal into your ComfyUI `custom_nodes` folder (typically within your ComfyUI installation directory)
    ```bash
-   git clone https://github.com/BrettMedia/BHTools.git
+   git clone https://github.com/BrettMedia/comfyui-bhtools.git
    ```
  2. **Restart ComfyUI** to load the new custom node.
  3. Included simple workflow.
