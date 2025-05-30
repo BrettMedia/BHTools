@@ -30,7 +30,7 @@ To install this node and use it with ComfyUI, follow these instructions:
 
 ## How It Works
 
-- **Optional Input Fields:**  
+  - **Optional Input Fields:**
   The node processes various optional inputs:
   - **Trigger Words (LORA Triggers):** Use these to rapidly invoke thematic styles or moods.
   - **Prompt Description:** A text field for describing your scene in detail; this narrative forms the creative prompt.
