@@ -1,17 +1,19 @@
 # BHTools 🎬
 
-BHTools is a collection of custom AI / ComfyUI tools and nodes designed to enhance creative workflows by merging traditional film, VFX, and animation techniques with innovative AI-driven methods. These tools empower visual storytellers to generate cinematic prompts and streamline their production pipelines.
+BHTools is a collection of custom tools and nodes designed to enhance creative workflows by merging traditional film, VFX, and animation techniques with innovative AI-driven methods. Developed by BrettMedia, these tools empower visual storytellers to generate cinematic prompts and streamline their production pipelines.
+
+## Overview
+
+BHTools integrates a suite of custom nodes that simplify the process of crafting detailed cinematic scene descriptions. Inspired by a passion for visual storytelling, these tools help you fine-tune parameters such as composition, camera angle, lighting, mood, and technical aesthetics.
 
 ## Custom Node: CinematicSceneDirectorBHTools
 
-<div style="float: right; width: 50%; height: 50%; margin-left: 1em;">
+<div style="float: right; width: 50%; margin-left: 1em;">
   <a href="./images/CinematicSceneDirectorBHTools.jpg" target="_blank">
-    <img src="./images/CinematicSceneDirectorBHTools.jpg" alt="CinematicSceneDirectorBHTools Screenshot">
+    <img src="./images/CinematicSceneDirectorBHTools.jpg" alt="CinematicSceneDirectorBHTools Screenshot" style="width:100%;">
   </a>
 </div>  
-
-
-**CinematicSceneDirectorBHTools** is a simple, but highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
+**CinematicSceneDirectorBHTools** is a highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
 
 ### How It Works
 
