@@ -21,12 +21,12 @@ BHTools integrates a suite of custom nodes that simplify crafting detailed cinem
 To install this node and use it with ComfyUI, follow these instructions:
 
 1. **Clone the Repository:**
-   Locate your ComfyUI `custom_nodes` folder (typically within your ComfyUI installation directory)
+   Terminal into your ComfyUI `custom_nodes` folder (typically within your ComfyUI installation directory)
    ```bash
    git clone https://github.com/BrettMedia/BHTools.git
-   cd BHTools
    ```
- 2. - **Restart ComfyUI** to load the new custom node.
+ 2. **Restart ComfyUI** to load the new custom node.
+ 3. Included simple workflow.
 
 ## How It Works
 
