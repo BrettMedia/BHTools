@@ -8,17 +8,48 @@ BHTools integrates a suite of custom nodes that simplify the process of crafting
 
 ## Custom Node: CinematicSceneDirectorBHTools
 
-**CinematicSceneDirectorBHTools** is a node within the BHTools collection. It generates comprehensive cinematic scene prompts using adjustable parameters, including:
+**CinematicSceneDirectorBHTools** is a highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
 
-- **Trigger & Preset Inputs:** Quickly define the thematic tone using Lora trigger words and predefined descriptions.
-- **Composition / Camera Perspective:** Customize shot type, angle, and movement.
-- **Camera Details:** Adjust focus, depth-of-field, and lens specifics.
-- **Style, Mood & Lighting:** Set lighting options, art style, time of day, and overall atmosphere.
-- **Aesthetic Adjustments:** Enhance your image using options for color palettes, film grain, and other visual effects.
+### How It Works
 
-## Installation & Usage
+- **Optional Input Fields:**  
+  The node can process various input types, all of which are optional:
+  - **Trigger Words (LORA-like Triggers):**  
+    Use these to rapidly invoke thematic styles or moods via shortcut trigger words.
+  - **Prompt Description:**  
+    A text field where you describe your scene in detail. This free-form narrative forms the core of the creative prompt.
+  - **Preset Override:**  
+    Presets allow you to automatically apply a set of predefined parameters. These can complement the trigger words and description but are not required.
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/BrettMedia/BHTools.git
-   cd BHTools
+- **Parameter Weighting:**  
+  Additional optional parameters outside the core text inputs include:
+  - **Composition / Camera Perspective:**  
+    Controls like shot type, angle, and movement are available.
+  - **Camera Details:**  
+    Adjustments for focus, depth-of-field, and lens specifics.
+  - **Style, Mood & Lighting:**  
+    Options for art style, time of day, lighting mood, and overall atmosphere.
+  - **Aesthetic Adjustments:**  
+    Fine-tuning settings for color palettes, film grain, and other visual effects.
+  
+  Each provided input is assigned a weighting that determines its influence on the final generated prompt. If an input is omitted, its associated weight drops to zero, allowing the node to default to preset values or ignore that parameter. This mechanism guarantees that even with minimal input—such as a simple trigger word—the final cinematic prompt remains coherent and visually compelling.
+
+### Example Code
+
+Below is a sample of how you might use the node within your project:
+
+```python
+# Example: Generate a cinematic scene prompt using the custom node
+from cinematic_node import CinematicSceneDirectorBHTools
+
+node = CinematicSceneDirectorBHTools()
+result = node.generate_prompt(
+    # All these fields are optional; fill in only what you need.
+    trigger_word="Epic",              # LORA-like trigger word
+    prompt="A breathtaking view of ancient ruins at sunrise",  # Narrative description
+    preset_override="Epic Adventure", # Optional preset to apply default settings
+    shot_type="Wide Shot",            # Optional composition parameter
+    camera_angle="Eye-Level",         # Optional camera perspective
+    lighting="Natural"                # Optional lighting parameter
+)
+print(result)
