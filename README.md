@@ -4,44 +4,48 @@ BHTools is a collection of custom tools and nodes designed to enhance creative w
 
 ## Overview
 
-BHTools integrates a suite of custom nodes that simplify the process of crafting detailed cinematic scene descriptions. Inspired by a passion for visual storytelling, these tools help you fine-tune parameters such as composition, camera angle, lighting, mood, and technical aesthetics.
+BHTools integrates a suite of custom nodes that simplify crafting detailed cinematic scene descriptions. These tools help you fine-tune parameters like composition, camera angle, lighting, mood, and technical aesthetics.
 
 ## Custom Node: CinematicSceneDirectorBHTools
 
-<div style="float: right; width: 50%; margin-left: 1em;">
+<div style="float: right; heigh: 25%; width: 25%; margin-left: 1em;">
   <a href="./images/CinematicSceneDirectorBHTools.jpg" target="_blank">
     <img src="./images/CinematicSceneDirectorBHTools.jpg" alt="CinematicSceneDirectorBHTools Screenshot" style="width:100%;">
   </a>
-</div>  
+</div>
+
 **CinematicSceneDirectorBHTools** is a highly flexible node within the BHTools collection. It generates comprehensive cinematic scene prompts through a range of optional inputs—ensuring you can tailor the output to your needs without being forced to fill every field.
 
-### How It Works
+## How to Download and Use for ComfyUI
+
+To install this node and use it with ComfyUI, follow these instructions:
+
+1. **Clone the Repository:**
+   Locate your ComfyUI `custom_nodes` folder (typically within your ComfyUI installation directory)
+   ```bash
+   git clone https://github.com/BrettMedia/BHTools.git
+   cd BHTools
+   ```
+ 2. - **Restart ComfyUI** to load the new custom node.
+
+## How It Works
 
 - **Optional Input Fields:**  
-  The node can process various input types, all of which are optional:
-  - **Trigger Words (LORA-like Triggers):**  
-    Use these to rapidly invoke thematic styles or moods via shortcut trigger words.
-  - **Prompt Description:**  
-    A text field where you describe your scene in detail. This free-form narrative forms the core of the creative prompt.
-  - **Preset Override:**  
-    Presets allow you to automatically apply a set of predefined parameters. These can complement the trigger words and description but are not required.
-
-- **Parameter Weighting:**  
-  Additional optional parameters outside the core text inputs include:
-  - **Composition / Camera Perspective:**  
-    Controls like shot type, angle, and movement are available.
-  - **Camera Details:**  
-    Adjustments for focus, depth-of-field, and lens specifics.
-  - **Style, Mood & Lighting:**  
-    Options for art style, time of day, lighting mood, and overall atmosphere.
-  - **Aesthetic Adjustments:**  
-    Fine-tuning settings for color palettes, film grain, and other visual effects.
+  The node processes various optional inputs:
+  - **Trigger Words (LORA Triggers):** Use these to rapidly invoke thematic styles or moods.
+  - **Prompt Description:** A text field for describing your scene in detail; this narrative forms the creative prompt.
+  - **Preset Override:** Presets can automatically apply predefined parameters to complement your input.
   
-  Each provided input is assigned a weighting that determines its influence on the final generated prompt. If an input is omitted, its associated weight drops to zero, allowing the node to default to preset values or ignore that parameter. This mechanism guarantees that even with minimal input—such as a simple trigger word—the final cinematic prompt remains coherent and visually compelling.
+- **Parameter Weighting:**  
+  Additional optional parameters include:
+  - **Composition / Camera Perspective:** Controls like shot type, angle, and movement.
+  - **Camera Details:** Adjustments for focus, depth-of-field, and lens specifics.
+  - **Style, Mood & Lighting:** Options for art style, time of day, lighting mood, and overall atmosphere.
+  - **Aesthetic Adjustments:** Fine-tuning settings for color palettes, film grain, and other visual effects.
+  
+  Each provided input is weighted to determine its influence on the final cinematic prompt. Omitted inputs drop to zero, allowing defaults or bypassing that parameter entirely. This ensures that even minimal input (e.g., just a trigger word) produces a coherent and compelling scene description.
 
-### Example Code
-
-Below is a sample of how you might use the node within your project:
+## Example Generated Code
 
 ```python
 # Example: Generate a cinematic scene prompt using the custom node
@@ -49,7 +53,6 @@ from cinematic_node import CinematicSceneDirectorBHTools
 
 node = CinematicSceneDirectorBHTools()
 result = node.generate_prompt(
-    # All these fields are optional; fill in only what you need.
     trigger_word="Epic",              # LORA-like trigger word
     prompt="A breathtaking view of ancient ruins at sunrise",  # Narrative description
     preset_override="Epic Adventure", # Optional preset to apply default settings
@@ -58,3 +61,4 @@ result = node.generate_prompt(
     lighting="Natural"                # Optional lighting parameter
 )
 print(result)
+```
